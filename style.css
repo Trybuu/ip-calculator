@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+
+}
+
+.calculator{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    max-width: 414px;
+    max-height: 896px;
+    padding: 1rem 1rem;
+}
+
+.calculator__result-wrapper{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-shrink: 1;
+    padding: 1rem 0;
+}
+
+.calculator__result{
+    display: block;
+    max-width: 100%;
+    overflow: scroll;
+    font-size: 3.2rem;
+}
+
+.calculator__buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.calculator__button{
+    width: 78px;
+    height: 78px;
+    margin: 5px 5px 0 0;
+    border-radius: 50%;
+    border: none;
+    color: #FFF;
+    font-size: 1.5rem;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+
+.calculator__button:hover{
+    opacity: 0.7;
+}
+
+.operation, .equals{
+    background-color: orange;
+}
+
+.operation--gray{
+    background-color: rgb(199, 199, 199);
+    color: #000;
+}
+
+.number{
+    background-color: #444;
+}
+
+.number--zero{
+    flex-grow: 1;
+    padding: 0 2rem;
+    text-align: left;
+    border-radius: 39px;
+}
+
+@media(orientation: portrait) and (min-height: 680px){
+    .calculator{
+        padding: 2rem 1rem;
+    }
+    .calculator__button{
+        width: 80px;
+        height: 80px;
+        margin: 20px 0 0 0;
+        font-size: 1.8rem;
+    }
+    .calculator__button:last-of-type, .calculator__button:nth-last-of-type(2){
+        margin-left: 10px;
+    }
+    .number--zero{
+        width: 33%;
+        border-radius: 39px;
+    }
+}
+
+@media(min-width: 600px){
+    .calculator__result{
+        overflow: hidden;
+    }
+    
+}
