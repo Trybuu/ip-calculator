@@ -40,7 +40,6 @@ class Calculator {
             this.showResult();
         }
         if(operationType === "%"){
-            console.log("Procent")
             this.actualNumber = this.actualNumber / 100;
             this.showResult();
         }
@@ -103,7 +102,6 @@ class Calculator {
         let result;
         const prev = parseFloat(this.previousNumber);
         const current = parseFloat(this.actualNumber);
-        console.log(prev, this.operator, current);
         if(isNaN(prev) || isNaN(current)) return;
         if(this.operator === "+"){
             result = prev + current;
@@ -122,7 +120,6 @@ class Calculator {
         this.previousNumber = "";
         this.operator = "";
         this.showResult();
-        console.log(result)
     }
 
     playTypingSound(){
